@@ -1,3 +1,8 @@
+import kivy
+kivy.require('1.8.0')
+import pygame
+from pygame.locals import *
+
 from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.properties import NumericProperty, ReferenceListProperty, ObjectProperty
@@ -15,7 +20,8 @@ class PongPaddle(Widget):
 			bounced = Vector(-1 * vx, vy)
 			vel = bounced * 1.1
 			ball.velocity = vel.x, vel.y + offset
-			
+	
+	
 
 class PongBall(Widget):
 	# velocity of the ball on x,y axis
